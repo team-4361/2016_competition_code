@@ -12,7 +12,7 @@ import com.ni.vision.NIVision.DrawMode;
 import com.ni.vision.NIVision.Image;
 import com.ni.vision.NIVision.ShapeMode;
 
-import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.CameraServer;
 import edu.wpi.first.wpilibj.Joystick;
 import edu.wpi.first.wpilibj.DigitalInput;
@@ -41,7 +41,7 @@ public class Robot extends IterativeRobot {
     
     private double stick0X, stick0Y, stick1X, stick1Y;
     
-    private CANTalon[] CAN;
+    private TalonSRX[] CAN;
     
     private Drive left, right;
     
@@ -101,24 +101,24 @@ public class Robot extends IterativeRobot {
         	stick[i] = new Joystick(i);
         }
         
-        CAN = new CANTalon[12];
+        CAN = new TalonSRX[12];
         for(int i = 0; i < CAN.length; i++)
         {
-        	CAN[i] = new CANTalon(i);
+        	CAN[i] = new TalonSRX(i);
         }
         
-        CANTalon[] leftDrive = {CAN[9], CAN[1]};
+        TalonSRX[] leftDrive = {CAN[9], CAN[1]};
     	left = new Drive(leftDrive);
     	
-    	CANTalon[] rightDrive = {CAN[2], CAN[3]};
+    	TalonSRX[] rightDrive = {CAN[2], CAN[3]};
     	right = new Drive(rightDrive);
     	
-    	CANTalon[] shoot = { CAN[4], CAN[5]};
-    	CANTalon[] shooterLift = {CAN[6], CAN[7]};
-    	CANTalon[] index = {CAN[8]};
+    	TalonSRX[] shoot = { CAN[4], CAN[5]};
+    	TalonSRX[] shooterLift = {CAN[6], CAN[7]};
+    	TalonSRX[] index = {CAN[8]};
     	shooter = new Shooter(shoot, shooterLift, index, limitSwitch, light);
     	
-    	CANTalon[] ChevelLift = {CAN[11]};
+    	TalonSRX[] ChevelLift = {CAN[11]};
     	
     	//lEnc = new Encoder(0, 1, true, EncodingType.k1X); rEnc = new Encoder(2, 3, true, EncodingType.k1X);
     	

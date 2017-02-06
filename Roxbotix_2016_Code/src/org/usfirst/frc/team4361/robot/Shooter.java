@@ -2,7 +2,7 @@ package org.usfirst.frc.team4361.robot;
 
 import edu.wpi.first.wpilibj.Timer;
 import edu.wpi.first.wpilibj.smartdashboard.SmartDashboard;
-import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Relay;
 
@@ -10,13 +10,13 @@ public class Shooter {
 	
 	private Timer indTimer;
 
-	private CANTalon[] SHT, LIFT, IND;
+	private TalonSRX[] SHT, LIFT, IND;
 	
 	private DigitalInput[] LTS;
 	
 	private Relay[] light;
 
-	public Shooter(CANTalon[] SHT, CANTalon[] LIFT, CANTalon[] IND, Relay[] light)
+	public Shooter(TalonSRX[] SHT, TalonSRX[] LIFT, TalonSRX[] IND, Relay[] light)
 	{
 		this.SHT = SHT;
 		this.LIFT = LIFT;
@@ -26,7 +26,7 @@ public class Shooter {
 		this.light = light;
 	}
 	
-	public Shooter(CANTalon[] SHT, CANTalon[] LIFT, CANTalon[] IND, DigitalInput[] LTS, Relay[] light)
+	public Shooter(TalonSRX[] SHT, TalonSRX[] LIFT, TalonSRX[] IND, DigitalInput[] LTS, Relay[] light)
 	{
 		this.SHT = SHT;
 		this.LIFT = LIFT;

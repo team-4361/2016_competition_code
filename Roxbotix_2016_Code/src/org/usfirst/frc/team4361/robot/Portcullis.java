@@ -1,18 +1,18 @@
 package org.usfirst.frc.team4361.robot;
 
-import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.Relay;
 import edu.wpi.first.wpilibj.DigitalInput;
 import edu.wpi.first.wpilibj.Timer;
 
 public class Portcullis {
 
-	private CANTalon CAN;
+	private TalonSRX CAN;
 	private Relay light;
 	private boolean move;
 	private Timer timer;
 	
-	public Portcullis(CANTalon CAN, Relay light)
+	public Portcullis(TalonSRX CAN, Relay light)
 	{
 		this.CAN = CAN;
 		this.light = light;

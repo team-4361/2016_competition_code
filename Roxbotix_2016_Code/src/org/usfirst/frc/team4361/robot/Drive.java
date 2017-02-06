@@ -1,13 +1,13 @@
 package org.usfirst.frc.team4361.robot;
 
-import edu.wpi.first.wpilibj.CANTalon;
+import edu.wpi.first.wpilibj.TalonSRX;
 import edu.wpi.first.wpilibj.Timer;
 
 public class Drive{
 
-	CANTalon[] CAN;
+	TalonSRX[] CAN;
 	
-	public Drive(CANTalon[] CAN)
+	public Drive(TalonSRX[] CAN)
 	{
 		this.CAN = CAN;
 	}
